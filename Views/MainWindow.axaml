@@ -1,17 +1,31 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:lab4_2.ViewModels"
+        xmlns:vm="using:l4_2.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="lab4_2.Views.MainWindow"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450" Width="450" Height="450"
+        x:Class="l4_2.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="lab4_2">
-
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        Title="RomanCalc">
+	
+	<StackPanel>
+		<TextBox Text="{Binding S}" Height="112.5" Focusable ="False" IsUndoEnabled="False" FontSize="66"/>
+	
+		<Grid ColumnDefinitions="112.5, 112.5, 112.5, 112.5" RowDefinitions="112.5, 112.5, 112.5, 112.5">
+	
+	<Button Name="I" CommandParameter="I" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="0" Grid.Column="0">I</Button>
+	<Button Name="L" CommandParameter="L" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  FontSize="36" Height="112.5" Width="112.5" Grid.Row="0" Grid.Column="1">L</Button>
+	<Button Name="M" CommandParameter="M" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="0" Grid.Column="2">M</Button>
+	<Button Name="mul" CommandParameter="*" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="0" Grid.Column="3">*</Button>
+	<Button Name="V" CommandParameter="V" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="1" Grid.Column="0">V</Button>
+	<Button Name="C" CommandParameter="C" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="1" Grid.Column="1">C</Button>
+	<Button Name="plus" CommandParameter="+" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="1" Grid.Column="2">+</Button>
+	<Button Name="div" CommandParameter="/" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="1" Grid.Column="3">/</Button>		
+	<Button Name="X" CommandParameter="X" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="2" Grid.Column="0">X</Button>		
+	<Button Name="D" CommandParameter="D" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="2" Grid.Column="1">D</Button>
+	<Button Name="min" CommandParameter="-" Command="{Binding StringReader}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="2" Grid.Column="2">-</Button>
+	<Button Name="eq" CommandParameter="=" Command="{Binding res}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Height="112.5" Width="112.5" Grid.Row="2" Grid.Column="3">=</Button>
+	</Grid>
+	</StackPanel>
 
 </Window>

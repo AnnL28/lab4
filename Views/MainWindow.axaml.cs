@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace lab4_2.Views
+namespace l4_2.Views
 {
     public partial class MainWindow : Window
     {

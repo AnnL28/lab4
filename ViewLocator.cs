@@ -1,9 +1,9 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using lab4_2.ViewModels;
+using l4_2.ViewModels;
 using System;
 
-namespace lab4_2
+namespace l4_2
 {
     public class ViewLocator : IDataTemplate
     {
